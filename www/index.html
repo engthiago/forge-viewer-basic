@@ -16,10 +16,10 @@
   <!-- Developer JS -->
   <script>
       var myViewerDiv = document.getElementById('MyViewerDiv');
-      var viewer = new Autodesk.Viewing.Private.GuiViewer3D(myViewerDiv);
+      var viewer = new Autodesk.Viewing.Viewer3D(myViewerDiv);
       var options = {
           'env' : 'Local',
-          'document' : './shaver/0.svf'
+          'document' : './Cube/3dBox.svf'
       };
       Autodesk.Viewing.Initializer(options, function() {
         viewer.start(options.document, options);

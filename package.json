@@ -1,0 +1,22 @@
+{
+  "name": "viewer-javascript-offline.sample",
+  "version": "1.0.0",
+  "description": "[![LMV](https://img.shields.io/badge/Viewer-v2.10-green.svg)](https://developer.autodesk.com/api/view-and-data-api/)",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engthiago/viewer-javascript-offline.sample.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/engthiago/viewer-javascript-offline.sample/issues"
+  },
+  "homepage": "https://github.com/engthiago/viewer-javascript-offline.sample#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
