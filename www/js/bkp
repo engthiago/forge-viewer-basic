@@ -1,0 +1,27 @@
+        ab = Math.abs(event.beta);
+        //alpha = event.alpha;
+        var flipped = (ab < 90 && event.alpha < 0) || (ab > 90 && event.alpha > 0);
+        // f.innerText = flipped;
+        // if (flipped) { alpha += 180 };
+
+        // box.applyMatrix(new THREE.Matrix4().makeRotationY(alpha * Math.PI / 180));
+
+        gamma = Math.abs(event.gamma + 90);
+        if (flipped) { gamma = -(-gamma + 180) }
+
+        box.applyMatrix(new THREE.Matrix4().makeRotationX(gamma * Math.PI / 180));
+
+        box.updateMatrixWorld();
+        var vector = box.geometry.vertices[0].clone();
+        var vector1 = box.geometry.vertices[1].clone();
+
+        vector.subVectors(vector, vector1);
+
+        vector.applyMatrix4(box.matrixWorld);
+
+        viewerLeft.navigation.setTarget(vector.normalize());
+
+
+        xB.innerText = vector.normalize().x;
+        yB.innerText = vector.normalize().y;
+        f.innerText = vector.normalize().z;

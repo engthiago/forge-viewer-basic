@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=no" />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="js/source/style.min.css?v=2.11" type="text/css">
+    <title>VR viewer</title>
+
+    <style>
+        body {
+            margin: 0
+        }
+        
+        .viewerleft {
+            position: absolute;
+            float: left;
+            width: 50%;
+            height: 100%;
+            background-color: #F0F8FF;
+        }
+        
+        .viewerright {
+            position: absolute;
+            margin-left: 50%;
+            float: right;
+            width: 50%;
+            height: 100%;
+            background-color: #F0F8FF;
+        }
+        
+        .button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 10;
+        }
+        
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body onload="loaded()">
+
+    <script src="js/source/three.min.js"></script>
+    <script src="js/source/viewer3D.min.js?v=2.11"></script>
+    <script src="js/vr-viewer.js"></script>
+    <script src="js/navigation-lock.js"></script>
+
+<div class="button">
+    <button onclick="goFull()">Full</button>
+    <button id="yaw">Yaw = 0</button>
+    <button id="pitch">Pitch = 0</button>
+    <button id="roll">Roll = 0</button>
+    <button id="Xaa">X = 0</button>
+    <button id="Yaa">Y = 0 </button>
+    <button id="flip"></button>
+</div>
+    <div id="container">
+        <div class="viewerleft" id="viewer-left"></div>
+        <div class="viewerright" id="viewer-right"></div>
+    </div>
+
+
+</body>
+
+</html>
